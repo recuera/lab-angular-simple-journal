@@ -17,13 +17,9 @@ export class JournalService {
       .map((res) => res.json());
   }
   
-  // edit(phone) {
-  //   return this.http.put(`${this.BASE_URL}/api/journal-entries/${phone.id}`, phone)
-  //     .map((res) => res.json());
-  // }
+  create(entry) {
+    return this.http.post(`${this.BASE_URL}/api/journal-entries`, entry)
+      .map((res) => res.json());
+  }
   
-  // remove(id) {
-  //   return this.http.get(`${this.BASE_URL}/api/journal-entries/delete/${id}`)
-  //     .map((res) => res.json());
-  // }
 }

@@ -27,4 +27,5 @@ export class SingleEntryComponent implements OnInit {
       this.myEntry = entry;
     })
   }
+  
 }

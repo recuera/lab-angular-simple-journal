@@ -24,10 +24,12 @@ router.post('/journal-entries', (req, res, next) => {
     title: req.body.title,
     content: req.body.content
   });
+  console.log(newEntry)
 
   newEntry.save( (err) => {
     if (err)             { return res.status(500).json(err) }
     if (newEntry.errors) { return res.status(400).json(newEntry) }
+    console.log("Ha funcionado")
                            return res.json(newEntry);
   });
 });

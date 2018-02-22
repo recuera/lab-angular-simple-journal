@@ -1,4 +1,9 @@
 <p>
   entry-list works!
 </p>
-<p *ngFor = "let e of entryList" >{{e.title}} - {{e.date | date:'yyyy-MM-dd HH:mm' }}</p>
+<div *ngFor = "let e of entryList" >
+  
+  <a [routerLink]="['', e._id]">{{e.title}}</a> <span>- {{e.date | date:'yyyy-MM-dd HH:mm' }}</span>
+
+</div>
+<app-entry-form-component></app-entry-form-component>

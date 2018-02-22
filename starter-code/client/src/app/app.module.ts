@@ -9,12 +9,14 @@ import { JournalService } from 'services/journal.service';
 import { SingleEntryComponent } from './single-entry/single-entry.component';
 import { RouterModule } from '@angular/router';
 import { routes } from "./routes";
+import { EntryFormComponentComponent } from './entry-form-component/entry-form-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntryListComponent,
-    SingleEntryComponent
+    SingleEntryComponent,
+    EntryFormComponentComponent
   ],
   imports: [
     BrowserModule,
