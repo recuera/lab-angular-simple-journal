@@ -6,16 +6,21 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { EntryListComponent } from './entry-list/entry-list.component';
 import { JournalService } from 'services/journal.service';
+import { SingleEntryComponent } from './single-entry/single-entry.component';
+import { RouterModule } from '@angular/router';
+import { routes } from "./routes";
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryListComponent
+    EntryListComponent,
+    SingleEntryComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [JournalService],
   bootstrap: [AppComponent]
